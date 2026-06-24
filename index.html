@@ -1,133 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Schmoño Super Scatter HD V2</title>
-<link rel="stylesheet" href="css/hd.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="theme-color" content="#051008"/>
+  <title>Schmoño Super Scatter Studio</title>
+  <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body>
-<div id="loader" class="loader">
-  <div class="loadLogo">SCHMOÑO<br><span>SUPER SCATTER</span></div>
-  <div class="loadBar"><i></i></div>
-</div>
-
-<div class="jungle">
-  <div class="moonGlow"></div>
-  <div class="ruinsLayer"></div>
-  <div class="fogLayer"></div>
-  <div class="leafLayer"></div>
-  <div class="sparkLayer"></div>
-</div>
-
-<div class="page">
-  <header class="topbar">
-    <div class="brand">
-      <strong>SCHMOÑO</strong>
-      <span>SUPER SCATTER</span>
-    </div>
-    <nav>
-      <button>HOME</button>
-      <button class="active">PLAY</button>
-      <button id="howBtn">HOW TO PLAY</button>
-      <button id="statsBtn">STATS</button>
-      <button id="resetBtn">RESET</button>
-    </nav>
-    <div class="wallet">
-      <span class="coin">◎</span>
-      <b id="coinsTop">100,000</b>
-      <button id="dailyBtn">+</button>
-      <button id="soundBtn">🔊</button>
-    </div>
-  </header>
-
-  <main class="board">
-    <aside class="leftPanel">
-      <div class="portrait">
-        <img src="assets/regular_scatter.jpeg" alt="Schmoño">
-      </div>
-      <h1>SCHMOÑO<br><span>SUPER SCATTER</span></h1>
-      <section class="payouts">
-        <h2>SUPER SCATTER PAYOUTS</h2>
-        <p><span>4 SUPER</span><b>50,000×</b></p>
-        <p><span>3 SUPER + 1 REGULAR</span><b>5,000×</b></p>
-        <p><span>2 SUPER + 2 REGULAR</span><b>500×</b></p>
-        <p><span>1 SUPER + 3 REGULAR</span><b>100×</b></p>
-        <p><span>FEATURE</span><b>15 FREE SPINS</b></p>
-      </section>
-      <div class="leftBtns">
-        <button id="menuBtn">☰</button>
-        <button id="infoBtn">i</button>
-      </div>
-    </aside>
-
-    <section class="slotPanel">
-      <div class="winBanner"><span></span><h2>WIN UP TO <b>50,000×</b> BET</h2><span></span></div>
-      <div class="reelTemple">
-        <div class="stoneTop"></div><div class="stoneBottom"></div><div class="stoneLeft"></div><div class="stoneRight"></div>
-        <div class="vine vineOne"></div><div class="vine vineTwo"></div>
-        <div id="grid" class="grid"></div>
-        <canvas id="fx"></canvas>
-      </div>
-      <div id="message" class="message">GOOD LUCK!</div>
-
-      <div class="meterPanel">
-        <div><b>SECRET BONUS METER</b><span>Hidden Target</span></div>
-        <div class="meterTrack"><i id="meterFill"></i></div>
-      </div>
-
-      <div class="controls">
-        <button id="spinBtn" class="spinBtn">↻</button>
-        <div class="betBox">
-          <span>BET</span>
-          <button id="betDown">−</button>
-          <b id="betText">100</b>
-          <button id="betUp">+</button>
-        </div>
-        <button id="maxBtn" class="controlBtn">MAX<br>BET</button>
-        <button id="turboBtn" class="controlBtn">TURBO ⚡</button>
-        <button id="autoBtn" class="controlBtn">AUTO</button>
-      </div>
-    </section>
-
-    <aside class="rightPanel">
-      <div class="statCard multCard"><h3>MULTIPLIER</h3><b id="multiText">1×</b></div>
-      <div class="statCard"><h3>FREE SPINS</h3><b><span id="freeText">0</span> / 15</b></div>
-      <div class="statCard"><h3>TOTAL WIN</h3><b id="winText">0</b></div>
-      <div class="statCard"><h3>CREDITS</h3><b id="creditText">100,000</b></div>
-      <div class="statCard"><h3>BUY</h3><b class="off">OFF</b><small>No deposits<br>No purchases</small></div>
-    </aside>
-  </main>
-
-  <footer class="featureBar">
-    <div><b>IMMERSIVE GAMEPLAY</b><span>Tumbling wins, random multipliers, Super Scatter feature.</span></div>
-    <div><b>BIG WIN POTENTIAL</b><span>Win up to 50,000× your bet with Super Scatter.</span></div>
-    <div><b>FREE COINS ONLY</b><span>Daily +10,000 coins. No real money.</span></div>
-    <div><b>PLAY ANYWHERE</b><span>Desktop and mobile responsive.</span></div>
-  </footer>
-</div>
-
-<div id="modal" class="modal hidden">
-  <div class="modalCard">
-    <button id="closeModal">×</button>
-    <h2>How to Play</h2>
-    <p>8 or more matching symbols pay anywhere on the 6×5 grid. Winning symbols explode and tumble away.</p>
-    <p>Regular Scatter is Schmoño. Super Scatter is the banana tile marked SUPER SCATTER.</p>
-    <p>Daily reward: 10,000 coins. Max bet: 3,000. Fake coins only.</p>
+  <div id="preloader" class="preloader">
+    <div class="pre-logo">SCHMOÑO<br><span>SUPER SCATTER</span></div>
+    <div class="pre-bar"><i></i></div>
+    <p>Studio build loading...</p>
   </div>
-</div>
 
-<div id="bigwin" class="bigwin hidden"><div id="bigTitle">BIG WIN</div><b id="bigAmount">0</b></div>
+  <div class="environment" aria-hidden="true">
+    <div class="painted-bg"></div>
+    <div class="temple-columns"></div>
+    <div class="sun-rays"></div>
+    <div class="fog fog-a"></div>
+    <div class="fog fog-b"></div>
+    <div class="fireflies"></div>
+    <div class="vignette"></div>
+  </div>
 
-<div id="cutscene" class="cutscene hidden">
-  <div class="bananaRain"></div>
-  <img src="assets/regular_scatter.jpeg" alt="Schmoño">
-  <h2>SCHMOÑO GOES CRAZY!</h2>
-  <p>Bananas explode everywhere. Free spins unlocked.</p>
-  <b>15 FREE SPINS</b>
-  <button id="continueBtn">CONTINUE</button>
-</div>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <strong>SCHMOÑO</strong>
+        <span>SUPER SCATTER</span>
+      </div>
+      <nav>
+        <button>HOME</button>
+        <button class="active">PLAY</button>
+        <button id="openRules">HOW TO PLAY</button>
+        <button id="openStats">STATS</button>
+        <button id="resetSave">RESET</button>
+      </nav>
+      <div class="wallet">
+        <span class="coin">◎</span>
+        <b id="coinsTop">100,000</b>
+        <button id="dailyBtn" title="Daily reward">+</button>
+        <button id="soundBtn" title="Sound">🔊</button>
+      </div>
+    </header>
 
-<script src="js/game.js"></script>
+    <main class="game-stage">
+      <aside class="left-hero panel">
+        <div class="hero-image"><img src="assets/symbols/regular_scatter.jpeg" alt="Schmoño"/></div>
+        <h1>SCHMOÑO<br><span>SUPER SCATTER</span></h1>
+        <div class="paytable">
+          <h2>SUPER SCATTER PAYS</h2>
+          <p><span>4 SUPER</span><b>50,000×</b></p>
+          <p><span>3 SUPER + 1 REGULAR</span><b>5,000×</b></p>
+          <p><span>2 SUPER + 2 REGULAR</span><b>500×</b></p>
+          <p><span>1 SUPER + 3 REGULAR</span><b>100×</b></p>
+          <p><span>FEATURE</span><b>15 FREE SPINS</b></p>
+        </div>
+      </aside>
+
+      <section class="machine panel">
+        <div class="win-banner">
+          <span></span><h2>WIN UP TO <b>50,000×</b> BET</h2><span></span>
+        </div>
+
+        <div class="reel-temple">
+          <div class="stone stone-top"></div>
+          <div class="stone stone-bottom"></div>
+          <div class="stone stone-left"></div>
+          <div class="stone stone-right"></div>
+          <div class="ivy ivy-left"></div>
+          <div class="ivy ivy-right"></div>
+          <div id="grid" class="grid"></div>
+          <canvas id="particles" class="particles"></canvas>
+        </div>
+
+        <div id="message" class="message">GOOD LUCK!</div>
+
+        <div class="bonus-meter">
+          <div><b>SECRET BONUS METER</b><span>Hidden Target</span></div>
+          <div class="track"><i id="meterFill"></i></div>
+        </div>
+
+        <div class="controls">
+          <button id="menuBtn" class="mini">☰</button>
+          <button id="infoBtn" class="mini">i</button>
+          <div class="bet-box">
+            <span>BET</span>
+            <button id="betDown">−</button>
+            <b id="betText">100</b>
+            <button id="betUp">+</button>
+          </div>
+          <button id="spinBtn" class="spin">↻</button>
+          <button id="maxBetBtn" class="control">MAX<br>BET</button>
+          <button id="turboBtn" class="control">TURBO ⚡</button>
+          <button id="autoBtn" class="control">AUTO</button>
+        </div>
+      </section>
+
+      <aside class="right-hud">
+        <div class="hud-card"><h3>MULTIPLIER</h3><b id="multiplierText" class="orb">1×</b></div>
+        <div class="hud-card"><h3>FREE SPINS</h3><b><span id="freeSpinsText">0</span> / 15</b></div>
+        <div class="hud-card"><h3>TOTAL WIN</h3><b id="totalWinText">0</b></div>
+        <div class="hud-card"><h3>CREDITS</h3><b id="creditText">100,000</b></div>
+        <div class="hud-card"><h3>BUY</h3><b class="off">OFF</b><small>No deposits<br>No purchases</small></div>
+      </aside>
+    </main>
+
+    <footer class="feature-strip">
+      <div><b>IMMERSIVE GAMEPLAY</b><span>Tumbling wins, random multipliers, Super Scatter, and hidden bonus meter.</span></div>
+      <div><b>BIG WIN POTENTIAL</b><span>Up to 50,000× bet with the best Super Scatter combo.</span></div>
+      <div><b>FREE COINS ONLY</b><span>10,000 daily coins. No deposits or purchases.</span></div>
+      <div><b>PLAY ANYWHERE</b><span>Desktop and mobile responsive.</span></div>
+    </footer>
+
+    <footer class="mobile-stats">
+      <div><span>MULTI</span><b id="mMulti">1×</b></div>
+      <div><span>SPINS</span><b id="mSpins">0 / 15</b></div>
+      <div><span>WIN</span><b id="mWin">0</b></div>
+      <div><span>CREDITS</span><b id="mCredits">100,000</b></div>
+    </footer>
+  </div>
+
+  <div id="rulesModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close">×</button>
+      <h2>How to Play</h2>
+      <p>8 or more matching symbols pay anywhere on the 6×5 grid. Winning symbols explode, vanish, and tumble.</p>
+      <p>Regular Scatter is the Schmoño monkey. Super Scatter is the banana tile marked SUPER SCATTER.</p>
+      <ul>
+        <li>1 Super + 3 Regular = 100× bet + 15 free spins</li>
+        <li>2 Super + 2 Regular = 500× bet + 15 free spins</li>
+        <li>3 Super + 1 Regular = 5,000× bet + 15 free spins</li>
+        <li>4 Super = 50,000× bet + 15 free spins</li>
+      </ul>
+      <p>Daily reward: 10,000 free coins every 24 hours. Max bet: 3,000. Fake coins only.</p>
+    </div>
+  </div>
+
+  <div id="statsModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close">×</button>
+      <h2>Stats</h2>
+      <p>Total spins: <b id="statSpins">0</b></p>
+      <p>Biggest win: <b id="statBiggest">0</b></p>
+      <p>Lifetime wins: <b id="statLifetime">0</b></p>
+      <p>Free-spin triggers: <b id="statFreeTriggers">0</b></p>
+    </div>
+  </div>
+
+  <div id="winOverlay" class="win-overlay hidden">
+    <div id="winTitle">BIG WIN</div>
+    <b id="winAmount">0</b>
+  </div>
+
+  <div id="bonusScene" class="bonus-scene hidden">
+    <div class="banana-rain"></div>
+    <img src="assets/symbols/regular_scatter.jpeg" alt="Schmoño"/>
+    <h2>SCHMOÑO GOES CRAZY!</h2>
+    <p>Bananas flying. Temple shaking. Free spins unlocked.</p>
+    <strong>15 FREE SPINS</strong>
+    <button id="skipBonus">CONTINUE</button>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>

@@ -1,14 +1,9 @@
-# Schmoño Super Scatter HD
+# Schmoño Super Scatter HD V2
 
-Upload these files to the root of your GitHub repository.
+This version is arranged for GitHub/Netlify root upload:
+- index.html
+- assets/
+- css/
+- js/
 
-Includes:
-- HD-style jungle/stone/gold UI
-- 6x5 reels
-- tumbling wins
-- scatter and super scatter rules
-- free spins
-- bonus cutscene
-- daily 10,000 coins
-- max bet 3,000
-- fake coins only
+Upload these root files/folders directly to the repository root.

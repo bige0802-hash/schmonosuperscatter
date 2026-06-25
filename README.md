@@ -1,4 +1,4 @@
-# Schmoño Super Scatter — Stage 1 Clean
+# Schmoño Super Scatter — Stage 2 Environment Pack
 
 Upload these root items to GitHub:
 - index.html
@@ -7,14 +7,13 @@ Upload these root items to GitHub:
 - src/
 - README.md
 
-This restarts Stage 1 clean:
-- HD-style shell
-- jungle/fog background
-- gold/stone UI direction
-- 6x5 grid
-- fake coins only
-- daily reward
-- max bet 3,000
-- secret bonus meter
-- free spins trigger
-- super scatter payouts
+Stage 2 adds:
+- More premium jungle/temple environment
+- Sun rays
+- Fog and fireflies
+- Side leaf curtains
+- Thicker carved stone reel frame
+- Moss and gold corner details
+- Better HD-style panels
+- Improved glow/lighting on machine and symbols
+- Same working Stage 1 gameplay

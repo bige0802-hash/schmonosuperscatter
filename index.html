@@ -3,13 +3,20 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Schmoño Super Scatter — Stage 1</title>
-<link rel="stylesheet" href="styles/stage1.css"/>
+<title>Schmoño Super Scatter — Stage 2</title>
+<link rel="stylesheet" href="styles/stage2.css"/>
 </head>
 <body>
-<div class="bg">
-  <div class="light"></div>
-  <div class="fog"></div>
+<div class="environment">
+  <div class="paintedJungle"></div>
+  <div class="templeSilhouette"></div>
+  <div class="sunRays"></div>
+  <div class="mist mistA"></div>
+  <div class="mist mistB"></div>
+  <div class="fireflies"></div>
+  <div class="leafCurtain leftLeaves"></div>
+  <div class="leafCurtain rightLeaves"></div>
+  <div class="vignette"></div>
 </div>
 
 <div class="app">
@@ -30,8 +37,10 @@
 </header>
 
 <main class="stage">
-  <aside class="left panel">
-    <img src="assets/symbols/regular_scatter.jpeg" alt="Schmoño">
+  <aside class="left panel stonePanel">
+    <div class="portraitFrame">
+      <img src="assets/symbols/regular_scatter.jpeg" alt="Schmoño">
+    </div>
     <h1>SCHMOÑO<br><span>SUPER SCATTER</span></h1>
     <section class="paytable">
       <h2>SUPER SCATTER PAYS</h2>
@@ -44,11 +53,23 @@
   </aside>
 
   <section class="machine panel">
-    <div class="banner">WIN UP TO <b>50,000×</b> BET</div>
-    <div class="frame">
+    <div class="banner"><i></i><span>WIN UP TO <b>50,000×</b> BET</span><i></i></div>
+
+    <div class="templeFrame">
+      <div class="stoneTop"></div>
+      <div class="stoneBottom"></div>
+      <div class="stoneLeft"></div>
+      <div class="stoneRight"></div>
+      <div class="moss mossTop"></div>
+      <div class="moss mossLeft"></div>
+      <div class="goldCorner tl"></div>
+      <div class="goldCorner tr"></div>
+      <div class="goldCorner bl"></div>
+      <div class="goldCorner br"></div>
       <div id="grid" class="grid"></div>
       <canvas id="fx"></canvas>
     </div>
+
     <div id="message" class="message">GOOD LUCK!</div>
 
     <div class="meterBox">
@@ -71,13 +92,20 @@
   </section>
 
   <aside class="right">
-    <div class="stat"><h3>MULTIPLIER</h3><b id="multiText">1×</b></div>
+    <div class="stat"><h3>MULTIPLIER</h3><b id="multiText" class="orb">1×</b></div>
     <div class="stat"><h3>FREE SPINS</h3><b><span id="freeText">0</span> / 15</b></div>
     <div class="stat"><h3>TOTAL WIN</h3><b id="winText">0</b></div>
     <div class="stat"><h3>CREDITS</h3><b id="creditsText">100,000</b></div>
     <div class="stat"><h3>BUY</h3><b class="off">OFF</b><small>No deposits<br>No purchases</small></div>
   </aside>
 </main>
+
+<footer class="featureStrip">
+  <div><b>IMMERSIVE GAMEPLAY</b><span>Temple lighting, fog, tumbling wins, Super Scatter.</span></div>
+  <div><b>BIG WIN POTENTIAL</b><span>Win up to 50,000× bet with Super Scatter.</span></div>
+  <div><b>FREE COINS ONLY</b><span>Daily +10,000. No real money.</span></div>
+  <div><b>PLAY ANYWHERE</b><span>Desktop and mobile responsive.</span></div>
+</footer>
 
 <footer class="mobileStats">
   <div><span>MULTI</span><b id="mMulti">1×</b></div>
@@ -106,6 +134,6 @@
   <button id="continueBtn">CONTINUE</button>
 </div>
 
-<script src="src/stage1.js"></script>
+<script src="src/stage2.js"></script>
 </body>
 </html>

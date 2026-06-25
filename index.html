@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Schmoño Super Scatter HD Ultimate</title>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  <div id="boot" class="boot">
+    <div class="boot-logo">SCHMOÑO<br><span>SUPER SCATTER</span></div>
+    <div class="boot-bar"><i></i></div>
+  </div>
+
+  <div class="world">
+    <div class="sky"></div>
+    <div class="rays"></div>
+    <div class="ruins"></div>
+    <div class="jungle left"></div>
+    <div class="jungle right"></div>
+    <div class="fog one"></div>
+    <div class="fog two"></div>
+    <div class="dust"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <main class="casino-shell">
+    <header class="top-nav">
+      <div class="logo">
+        <span>SCHMOÑO</span>
+        <b>SUPER SCATTER</b>
+      </div>
+      <nav>
+        <button>HOME</button>
+        <button class="active">PLAY</button>
+        <button id="howBtn">HOW TO PLAY</button>
+        <button>LEADERBOARD</button>
+        <button>VIP CLUB</button>
+      </nav>
+      <div class="profile">
+        <div class="coin"></div>
+        <strong id="coinTop">100,000</strong>
+        <button id="dailyBtn" class="plus">+</button>
+        <div class="avatar"><img src="assets/symbols/schmono-main.jpeg" onerror="this.remove()"></div>
+        <span>Player123</span>
+        <button id="soundBtn" class="menu">🔊</button>
+      </div>
+    </header>
+
+    <section class="slot-stage">
+      <aside class="poster">
+        <div class="hero-monkey">
+          <img src="assets/symbols/schmono-main.jpeg" onerror="this.remove()" alt="Schmoño">
+        </div>
+        <h1>SCHMOÑO<br><span>SUPER SCATTER</span></h1>
+        <div class="payouts">
+          <h2>SUPER SCATTER PAYOUTS</h2>
+          <p><span>4 SUPER</span><b>50,000x</b></p>
+          <p><span>3 SUPER + 1 REGULAR</span><b>5,000x</b></p>
+          <p><span>2 SUPER + 2 REGULAR</span><b>500x</b></p>
+          <p><span>1 SUPER + 3 REGULAR</span><b>100x</b></p>
+          <p><span>4+ SCATTER AWARDS</span><b>15 FREE SPINS</b></p>
+        </div>
+        <div class="small-buttons">
+          <button>☰</button><button>🔊</button><button>i</button>
+        </div>
+      </aside>
+
+      <section class="machine">
+        <div class="top-stone">
+          <div class="vines"></div>
+          <h2>WIN UP TO <b>50,000x</b></h2>
+        </div>
+
+        <div id="reelFrame" class="reel-frame">
+          <div class="stone-corner tl"></div>
+          <div class="stone-corner tr"></div>
+          <div class="stone-corner bl"></div>
+          <div class="stone-corner br"></div>
+          <div id="grid" class="grid"></div>
+          <canvas id="particles"></canvas>
+        </div>
+
+        <div id="ticker" class="ticker">TUMBLING WINS WITH RANDOM MULTIPLIERS!</div>
+
+        <div class="bottom-console">
+          <div class="bet-control">
+            <button id="betDown">−</button>
+            <div><span>BET</span><b id="betText">100</b></div>
+            <button id="betUp">+</button>
+          </div>
+
+          <button id="spinBtn" class="spin-btn"><span>↻</span></button>
+
+          <button id="maxBetBtn" class="big-control">MAX<br>BET</button>
+          <button id="turboBtn" class="big-control">TURBO ⚡</button>
+          <button id="autoBtn" class="big-control">AUTO</button>
+        </div>
+
+        <div class="secret-meter">
+          <div><b>SECRET BONUS METER</b><span>Hidden Target</span></div>
+          <div class="track"><i id="meterFill"></i></div>
+        </div>
+      </section>
+
+      <aside class="hud">
+        <div class="card multiplier-card">
+          <h3>MULTIPLIER</h3>
+          <div id="multiText" class="winged">1x</div>
+        </div>
+        <div class="card">
+          <h3>FREE SPINS</h3>
+          <b><span id="freeText">0</span> / 15</b>
+        </div>
+        <div class="card">
+          <h3>TOTAL WIN</h3>
+          <b id="winText">0</b>
+        </div>
+        <div class="card">
+          <h3>CREDITS</h3>
+          <b id="creditsText">100,000</b>
+        </div>
+        <div class="card">
+          <h3>BUY</h3>
+          <b class="off">OFF</b>
+          <small>No deposits<br>No purchases</small>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="feature-strip">
+      <div><i>◎</i><b>IMMERSIVE GAMEPLAY</b><span>Tumbling reels, random multipliers, Super Scatter and cinematic bonus meter.</span></div>
+      <div><i>🏆</i><b>BIG WIN POTENTIAL</b><span>Win up to 50,000x your bet with the maximum Super Scatter combo.</span></div>
+      <div><i>🐵</i><b>FUN FOR EVERYONE</b><span>Free coins only. No real money. No deposits. No purchases.</span></div>
+      <div><i>📱</i><b>PLAY ANYWHERE</b><span>Optimized for desktop and mobile devices.</span></div>
+    </footer>
+  </main>
+
+  <div id="freeBanner" class="free-banner hidden">
+    <span>FREE SPINS MODE</span>
+    <b id="freeBannerCount">15</b>
+    <small>Multiplier grows during the feature</small>
+  </div>
+
+  <div id="bigWin" class="big-win hidden">
+    <h2 id="bigWinTitle">BIG WIN</h2>
+    <b id="bigWinAmount">0</b>
+  </div>
+
+  <div id="bonusScene" class="bonus-scene hidden">
+    <div class="banana-rain"></div>
+    <img src="assets/symbols/schmono-main.jpeg" alt="">
+    <h2>SCHMOÑO SUPER SCATTER!</h2>
+    <p>Bananas flying. Jungle shaking. Free spins unlocked.</p>
+    <strong>15 FREE SPINS</strong>
+    <button id="skipBonus">CONTINUE</button>
+  </div>
+
+  <div id="rulesModal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeRules">×</button>
+      <h2>How to Play</h2>
+      <p>Match 8 or more identical paying symbols anywhere on the 6×5 grid to win. Winning symbols explode and tumble.</p>
+      <p>Regular Scatter is Schmoño. Super Scatter is the banana tile marked SUPER.</p>
+      <p>Super Scatter pays: 1+3 = 100x, 2+2 = 500x, 3+1 = 5,000x, 4 Super = 50,000x. Fake coins only.</p>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
